@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: tech_store
+  - database: raw
+  - tables:
+    - name: city
+    - name: customer
+    - name: employee
+    - name: orders
+    - name: product
+    - name: state
+    - name: zip
