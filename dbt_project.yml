@@ -23,6 +23,15 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+
+seeds:
+  dbt_training:
+    sale_dates:
+      +column_types:
+        SALE_DATE: date
+        NAME: varchar
+        DISCOUNT_PERCENT: numeric(18,2)
+
 models:
   dbt_training:
     staging:
