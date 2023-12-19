@@ -39,7 +39,7 @@ final as (
         products.price,
         products.currency,
         orders.quantity,
-        sale_dates.sale_date is not null as 'sale_order',
+        sale_dates.sale_date is not null as is_sale_order,
         transactions.cost_per_unit_in_usd,
         transactions.amount_in_usd,
         transactions.tax_in_usd,
@@ -60,4 +60,4 @@ final as (
         on orders.created_at = sale_dates.sale_date
 )
 
-select * from sale_dates
+select * from final
