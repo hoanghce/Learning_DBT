@@ -15,8 +15,8 @@ final as (
         userid as employee_id,
         customerid as customer_id,
         datetime as created_at,
-        convert_timezone('UTC','America/New_York',datetime) as 'create_at_est',
-        date(datetime) AS 'create_at_dt'
+        convert_timezone('UTC','America/New_York',datetime) as create_at_est,
+        date(datetime) AS create_at_dt
 
     from orders
 
