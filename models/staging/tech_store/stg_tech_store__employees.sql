@@ -15,6 +15,7 @@ final as (
         concat(first_name, ' ', last_name) as full_name,
         hiredate as hired_at,
         enddate as terminated_at,
+        nvl(enddate, '{{ var("default_date") }}') as terminated_at_h,
         iff(terminated_at is null, true, false) as is_active 
     from employees
 
