@@ -26,6 +26,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 seeds:
   dbt_training:
+    +schema: staging
     sale_dates:
       +column_types:
         SALE_DATE: date
@@ -39,12 +40,14 @@ vars:
 models:
   dbt_training:
     staging:
-      +materialized: view
+      +materialized: table
+      +schema: staging
       +tags:
         - p2
     intermediate:
       +materialized: ephemeral
     marts:
       +materialized: table
+      +schema: marts
       +tags:
         - p1
