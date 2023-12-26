@@ -1,5 +1,4 @@
-name: Deploy to Prod_1 (Post Merge)
-
+name: Deploy to Prod (Post Merge)
 
 on:
   pull_request:
@@ -30,4 +29,3 @@ jobs:
 
       - name: Deploy & Test Models (PROD)
         run: dbt build --profiles-dir . --target prod
-
