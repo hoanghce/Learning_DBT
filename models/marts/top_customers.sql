@@ -1,3 +1,5 @@
+
+{{ config(schema=  var('user_name')) }}
 with
 
 customers as (

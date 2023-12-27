@@ -35,6 +35,7 @@ seeds:
 
 vars:
   default_date: '9999-01-01'
+  user_name: 'hoangtest'
   
 
 models:
