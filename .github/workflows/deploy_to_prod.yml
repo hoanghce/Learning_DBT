@@ -1,4 +1,4 @@
-name: Deploy to Prod (Post Merge) 1
+name: Deploy to Prod (Post Merge)
 
 on:
   pull_request:
